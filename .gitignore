@@ -10,7 +10,6 @@ env/
 
 # Jupyter Notebooks
 .ipynb_checkpoints
-*.ipynb
 
 # Distribution / packaging
 *.egg-info/
