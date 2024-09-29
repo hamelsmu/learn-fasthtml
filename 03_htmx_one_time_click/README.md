@@ -1,0 +1,1 @@
+Write an HTMX attribute that will trigger a GET request to "/data" when the element is clicked, but only once, and swap the result into the element with id "target".

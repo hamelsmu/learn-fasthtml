@@ -1,0 +1,1 @@
+Write the JavaScript code to enable HTMX logging and filter the logs to only show 'htmx:afterRequest' events.

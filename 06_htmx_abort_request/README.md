@@ -1,0 +1,1 @@
+Write the HTML for a button that, when clicked, will abort any ongoing HTMX request on an element with id "long-running-request".

@@ -1,0 +1,1 @@
+Write the JavaScript code to monitor all click events on an element with id "interactive-div" using Chrome's `monitorEvents()` function.

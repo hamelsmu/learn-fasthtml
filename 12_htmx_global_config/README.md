@@ -1,0 +1,1 @@
+Write the HTML `<meta>` tag to configure HTMX to use `outerHTML` as the default swap style and set the default request timeout to 5 seconds.

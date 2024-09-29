@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+venv/
+env/
+.env
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+*.ipynb
+
+# Distribution / packaging
+*.egg-info/
+dist/
+build/
+
+# Unit test / coverage reports
+.coverage
+.pytest_cache/
+
+# IDEs
+.vscode/
+.idea/
+
+# OS generated files
+.DS_Store
+
+# Logs
+*.log
+
+# Database
+*.sqlite3
+
