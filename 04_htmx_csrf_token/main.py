@@ -1,26 +1,18 @@
 from fasthtml.common import *
 
-app, rt = fast_app()
+# The below code to the following JavaScript code:
+# document.addEventListener('DOMContentLoaded', function() {
+#     document.body.addEventListener('htmx:configRequest', (event) => {
+#         event.detail.headers['my-token'] = 'my_token_value';
+#     });
+# });
+js = HtmxOn('configRequest', "event.detail.headers['my-token'] = 'my_token_value';")
+app, rt = fast_app(hdrs=(js,))
 
 @rt("/")
-def get():
-    return Div(
-        "Click me",
-        hx_get="/data",
-        hx_target="#target",
-        hx_swap="innerHTML"
-    ), Div(id="target")
+def get(): return Div("Click me", hx_get="/data")
 
 @rt("/data")
-def data():
-    return "Data from the server"
-
-@app.route("/static/js/main.js")
-def js():
-    return """
-        document.body.addEventListener('htmx:configRequest', (event) => {
-            event.detail.headers['X-CSRF-Token'] = 'your_csrf_token_value';
-        });
-    """
+def data(): return "Data from the server"
 
 serve()

@@ -1,20 +1,17 @@
 from fasthtml.common import *
-
 app, rt = fast_app()
 
 @rt("/")
 def get():
     return Div(
         "Click me",
-        id="click-me",
-        hx_get="/data",
-        hx_target="#target",
-        hx_swap="innerHTML",
-        hx_trigger="click once"
-    ), Div(id="target")
+        hx_get="/data", # Make a GET request to "/data" when clicked
+        hx_target="#target", # Specify where to insert the response
+        hx_swap="beforeend", # Specify how to insert the response
+        # hx_trigger="click once", # Trigger the request on click, but only once
+    ), Div(id="target") # Empty div that will receive the response
 
 @rt("/data")
-def data():
-    return "Data from the server"
+def data(): return "Data from the server"
 
 serve()

@@ -1,4 +1,4 @@
-Write the server-side code (in Python using Flask) to trigger a 'userUpdated' event on the client side when a user is updated:
+Write the server-side code to trigger a 'userUpdated' event on the client side when a user is updated:
 
 ```python
 @app.route('/update-user', methods=['POST'])
